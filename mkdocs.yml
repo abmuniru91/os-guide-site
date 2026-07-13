@@ -1,0 +1,67 @@
+site_name: Open-Source UI/UX Guide — DTEG Project
+site_description: Gender-responsive UI/UX guide for digital solutions in Ghana, built from the DTEG project's field evidence.
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  font:
+    text: Roboto
+  icon:
+    repo: fontawesome/brands/git-alt
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/dteg-data.js
+  - javascripts/dteg-interactive.js
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - '1. Introduction and Background': 01-introduction.md
+  - '2. Understanding the Users': 02-understanding-users.md
+  - '3. Principles for Gender-Responsive Design': 03-principles.md
+  - '4. UI/UX Design Best Practices': 04-design-practices.md
+  - '5. Insights and Learnings': 05-insights.md
+  - '6. Open-Source Toolkit and Resources': 06-toolkit.md
+  - '7. Recommendations': 07-recommendations.md
+  - '8. Offering User Testing as a Business': 08-business-model.md
+  - '9. Sustaining the Open-Source Guide': 09-sustaining.md
+  - References: references.md
+
+extra:
+  social: []
