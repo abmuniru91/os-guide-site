@@ -1,20 +1,14 @@
 # OPEN-SOURCE UI/UX GUIDE FOR GENDER-RESPONSIVE DIGITAL SOLUTIONS IN GHANA
 
-*Version 7.0 — GIZ-Aligned Restructure, Anonymized Edition with Quick Start, Visual Guide, Final Report Corrections & Readability Revision | Open-source | Community-maintained*
-
-*Project: Digital Transformation for Inclusive Entrepreneurship in Ghana (DTEG) | GIZ Transaction No. 81294019*
-
 ## About This Guide
 
-This guide distills field-based user research, usability testing, and co-creation work carried out under the DTEG project into practical guidance for anyone designing or adapting digital solutions for entrepreneurs in Ghana.
+This guide distills field-based user research, usability testing, and co-creation work carried out under the DTEG (User-Testing and support to the adaptation of digital solutions for informal entrepreneurs) project into practical guidance for anyone designing or adapting digital solutions for entrepreneurs in Ghana.
 
 It synthesizes learnings from across the DTEG project, covering the Upper East, Northern, Eastern, and Ashanti regions of Ghana in Phase 1, and extending into Upper West and North East Region in Phase 2. It draws on validation reports, co-creation records, Open-Source Guide input submissions, field observations, and direct contributions from all participating intermediary organizations.
 
 All findings and recommendations presented in this guide trace directly to documented DTEG project activity. To protect participant, intermediary, and solution-provider confidentiality ahead of open-source publication, this edition generalizes and anonymizes examples throughout: no individual participant, staff member, or founder is named, and intermediary organizations and the solutions they tested are referred to by consistent reference codes (for example, "Intermediary N1" and "Solution S1") rather than by name. Region, sector, and the substance of each finding are preserved in full — only identifying names are removed. Section 1.3 explains the coding scheme.
 
 The guide is intended to be practical, honest, and specific. It does not summarize international design literature. It reports what happened in the field — what worked, what did not, and why.
-
-**License.** This guide is intended for release under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence, consistent with its open-source status and its planned hand-over to the Ghana Hubs Network (GHN) as part of the DTEG project's sustainability plan. Under CC BY 4.0, anyone may share, adapt, and build on this work for any purpose, including commercially, provided appropriate credit is given to GFA Consulting Group GmbH and GIZ, a link to the licence is provided, and any changes made are indicated.
 
 ---
 
