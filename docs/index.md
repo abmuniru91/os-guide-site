@@ -71,7 +71,7 @@ The guide is intended to be practical, honest, and specific. It does not summari
 
 ![Figure 1 — The project journey, mapped to guide sections](assets/project_journey.png)
 
-## Key Findings at a Glance
+## Key Findings at a Glance {: #key-findings }
 
 <p class="dteg-section-note">A summary of the key findings for a general read before diving into the full sections. It is a compressed summary of Section 5, not a substitute for it.</p>
 
@@ -84,7 +84,7 @@ The guide is intended to be practical, honest, and specific. It does not summari
   <article class="dteg-finding"><p class="dteg-finding__num">06</p><h3>The same principles held across two very different tracks</h3><p>Adapting eighteen existing products and validating twelve new ideas before they fully existed, despite different constraints, pace, and starting points.</p><p class="dteg-finding__ref">Section 5.6</p></article>
 </div>
 
-## Quick Start: Running Your First User Test in 5 Days
+## Quick Start: Running Your First User Test in 5 Days {: #quick-start }
 
 If this is your first time running a test and you do not have time to read the full guide first, start here. This gets you through one complete test. Come back to the full section once you've run a session; the details will make more sense with a real test behind you.
 
