@@ -27,16 +27,19 @@ theme:
     - search.highlight
     - content.code.copy
   font:
-    text: Roboto
+    text: Source Sans 3
+    code: IBM Plex Mono
   icon:
     repo: fontawesome/brands/git-alt
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/dteg-home.css
 
 extra_javascript:
   - javascripts/dteg-data.js
   - javascripts/dteg-interactive.js
+  - javascripts/dteg-home.js
 
 markdown_extensions:
   - admonition
