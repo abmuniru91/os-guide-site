@@ -1,6 +1,6 @@
-/* DTEG cohort data, transcribed directly from Section 1.3 (regional cohort summary)
-   and Section 2.2's "Solutions at a glance" table. Keep this file in sync with those
-   two sources if the underlying counts in the guide ever change. */
+/* Project cohort data, transcribed directly from Section 1.3 of the First Edition
+   (regional cohort summary, Phase 1 roster, and Phase 2 roster). Keep this file in
+   sync with Section 1.3 if the underlying counts in the guide ever change. */
 
 window.DTEG_REGIONS = [
   {
@@ -15,16 +15,16 @@ window.DTEG_REGIONS = [
     name: "Upper East Region",
     region: "Upper East",
     intermediaries: 2,
-    solutions: 4,
-    note: "2 intermediaries (Intermediary N1, Intermediary U1) · 4 solutions — Phase 1 + Phase 2.",
+    solutions: 3,
+    note: "2 intermediaries (Intermediary N1, Intermediary U1) · 3 solutions — Phase 1 + Phase 2.",
     secondary: false
   },
   {
     name: "North East Region",
     region: "North East",
     intermediaries: 0,
-    solutions: 1,
-    note: "1 solution (Phase 2), via Intermediary N1's Phase 2 role — see Section 1.3's note on region coding.",
+    solutions: 2,
+    note: "2 solutions (Phase 2), via Intermediary N1's Phase 2 role — see Section 1.3's note on region coding.",
     secondary: false
   },
   {
@@ -88,8 +88,8 @@ window.DTEG_SOLUTIONS = [
   { code: "P6", phase: "Phase 2", region: "Northern", field: "Digital savings groups (susu)", insight: "Unprompted demand for pooled, return-generating group investment, beyond the original scope", evidence: "Full field evidence", status: "Active", finalist: "3rd place" },
   { code: "P7", phase: "Phase 2", region: "Northern", field: "Simple bookkeeping (low digital literacy)", insight: "Deliberately minimal design proved the concept, then immediately generated demand for more features", evidence: "Full field evidence", status: "Active", finalist: "" },
   { code: "P8", phase: "Phase 2", region: "Upper West", field: "On-demand agro-services platform", insight: "Connects smallholder farmers to agro services; not documented beyond this", evidence: "Roster only", status: "Active", finalist: "Finalist" },
-  { code: "P9", phase: "Phase 2", region: "Upper East", field: "Mobile money fraud verification", insight: "Real-time verification of MoMo recipients before sending; not documented beyond this", evidence: "Roster only", status: "Active", finalist: "Finalist" },
+  { code: "P9", phase: "Phase 2", region: "North East", field: "Mobile money fraud verification", insight: "Real-time verification of MoMo recipients before sending; not documented beyond this", evidence: "Roster only", status: "Active", finalist: "Finalist" },
   { code: "P10", phase: "Phase 2", region: "Eastern", field: "AI-enabled financial record-keeping", insight: "Not documented beyond name, region, and status", evidence: "Roster only", status: "Active", finalist: "" },
-  { code: "P11", phase: "Phase 2", region: "Eastern", field: "Embedded agricultural insurance", insight: "Data-driven insurance for farmers; not documented beyond this", evidence: "Roster only", status: "Active", finalist: "1st place" },
+  { code: "P11", phase: "Phase 2", region: "Eastern", field: "Embedded insurance, micro-pension and advisory (AI-supported)", insight: "Validated with 500+ women farmers: bundling raised willingness to contribute, and AI works out of sight behind USSD, SMS and voice", evidence: "Full field evidence", status: "Active", finalist: "1st place" },
   { code: "P12", phase: "Phase 2", region: "North East", field: "Farmer-to-market digital solution", insight: "Reduces post-harvest losses; not documented beyond this", evidence: "Roster only", status: "Active", finalist: "Finalist" }
 ];

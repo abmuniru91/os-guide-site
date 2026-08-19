@@ -1,5 +1,5 @@
-site_name: Open-Source UI/UX Guide — DTEG Project
-site_description: Gender-responsive UI/UX guide for digital solutions in Ghana, built from the DTEG project's field evidence.
+site_name: Designing Inclusive Digital Solutions
+site_description: An Open-Source UI/UX Guide for Designing Context-Aware and Gender-Responsive Digital Solutions in Ghana. First Edition, 2026. GIZ and GFA Consulting Group GmbH, CC BY 4.0.
 docs_dir: docs
 
 theme:
@@ -52,16 +52,26 @@ plugins:
 
 nav:
   - Home: index.md
-  - '1. Introduction and Background': 01-introduction.md
-  - '2. Understanding the Users': 02-understanding-users.md
-  - '3. Principles for Gender-Responsive Design': 03-principles.md
-  - '4. UI/UX Design Best Practices': 04-design-practices.md
-  - '5. Insights and Learnings': 05-insights.md
-  - '6. Open-Source Toolkit and Resources': 06-toolkit.md
-  - '7. Recommendations': 07-recommendations.md
-  - '8. Offering User Testing as a Business': 08-business-model.md
-  - '9. Sustaining the Open-Source Guide': 09-sustaining.md
+  - The Guide:
+      - '1. Introduction and Background': 01-introduction.md
+      - '2. Understanding the Users': 02-understanding-users.md
+      - '3. Principles for Gender-Responsive Design': 03-principles.md
+      - '4. UI/UX Design Best Practices': 04-design-practices.md
+      - '5. Insights and Learnings': 05-insights.md
+      - '6. Open-Source Toolkit and Resources': 06-toolkit.md
+      - '7. Recommendations': 07-recommendations.md
+      - '8. Offering User Testing as a Business': 08-business-model.md
+      - '9. Sustaining the Open-Source Guide': 09-sustaining.md
   - References: references.md
+  - About & Credits:
+      - Imprint: imprint.md
+      - Acknowledgements: acknowledgements.md
+      - Disclaimer: disclaimer.md
+
+copyright: >
+  © 2026 GIZ GmbH and GFA Consulting Group GmbH · Licensed under
+  <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  Photographs, logos and third-party figures excluded.
 
 extra:
   social: []
