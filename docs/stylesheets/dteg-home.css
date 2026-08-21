@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap");
+/* Instrument Sans is preconnected and loaded from overrides/main.html so the
+   font request starts in parallel with this stylesheet rather than after it. */
 
 /* ================================================================
    Typography and colour system
@@ -19,6 +20,11 @@
   --dteg-green: #2E7D46;
   --dteg-amber: #8A5A00;
   --dteg-display: "Instrument Sans", var(--md-text-font), system-ui, sans-serif;
+  /* Surface tints that have to flip with the colour scheme */
+  --dteg-track: rgba(0,0,0,.1);
+  --dteg-hover: rgba(0,0,0,.04);
+  --dteg-box: #BFB9AE;
+  --dteg-dot: #D3CEC5;
 }
 
 [data-md-color-scheme="slate"] {
@@ -30,6 +36,12 @@
   --dteg-muted: #A6B0BA;
   --dteg-line: rgba(255,255,255,.16);
   --dteg-paper: rgba(255,255,255,.05);
+  /* Lifted so the dark finding cards still read as cards against the page */
+  --dteg-deep: #1B2B38;
+  --dteg-track: rgba(255,255,255,.16);
+  --dteg-hover: rgba(255,255,255,.07);
+  --dteg-box: #7C858E;
+  --dteg-dot: #4E5A65;
 }
 
 .md-typeset h1,
@@ -78,8 +90,10 @@
   position: relative;
   overflow: hidden;
   background: var(--dteg-deep);
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  /* --dteg-sbw is the measured scrollbar width (set in dteg-home.js). Without
+     subtracting it, 100vw overflows the viewport and the page scrolls sideways. */
+  width: calc(100vw - var(--dteg-sbw, 0px));
+  margin-left: calc(50% - (100vw - var(--dteg-sbw, 0px)) / 2);
   margin-top: -1.2rem;
 }
 .dteg-hero__media { position: absolute; inset: 0; }
@@ -165,6 +179,7 @@
   font-weight: 700;
   color: #fff;
   letter-spacing: -.02em;
+  white-space: nowrap;
 }
 .dteg-stat__label { display: block; font-size: .68rem; color: rgba(255,255,255,.7); margin-top: .2rem; }
 
@@ -202,7 +217,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #D3CEC5;
+  background: var(--dteg-dot);
 }
 .dteg-router__role:hover { background: var(--dteg-paper); }
 .dteg-router__role[aria-selected="true"] { font-weight: 600; background: var(--dteg-paper); }
@@ -298,7 +313,7 @@
 .md-typeset .dteg-checklist__head { display: flex; justify-content: space-between; gap: .6rem; align-items: baseline; margin: 0; }
 .dteg-checklist__head strong { font-family: var(--dteg-display); font-size: .95rem; }
 .dteg-checklist__head span { font-family: var(--md-code-font), monospace; font-size: .68rem; color: var(--dteg-green); }
-.dteg-checklist__bar { height: 6px; border-radius: 100px; background: rgba(0,0,0,.1); margin: .7rem 0 .9rem; overflow: hidden; }
+.dteg-checklist__bar { height: 6px; border-radius: 100px; background: var(--dteg-track); margin: .7rem 0 .9rem; overflow: hidden; }
 .dteg-checklist__bar span { display: block; height: 6px; background: var(--dteg-green); border-radius: 100px; transition: width .25s ease; }
 .dteg-check {
   font: inherit;
@@ -324,12 +339,12 @@
   width: 18px;
   height: 18px;
   border-radius: 5px;
-  border: 2px solid #BFB9AE;
+  border: 2px solid var(--dteg-box);
   box-sizing: border-box;
 }
-.dteg-check:hover { background: rgba(0,0,0,.04); }
-.dteg-check[aria-pressed="true"] { color: var(--dteg-muted); }
-.dteg-check[aria-pressed="true"]::before {
+.dteg-check:hover { background: var(--dteg-hover); }
+.dteg-check[aria-checked="true"] { color: var(--dteg-muted); }
+.dteg-check[aria-checked="true"]::before {
   background: var(--dteg-green);
   border-color: var(--dteg-green);
   content: "\2713";
@@ -397,9 +412,32 @@
 .dteg-cta__media { position: relative; min-height: 15rem; }
 .dteg-cta__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; }
 
+/* Section references rendered as links inside the route, day and finding cards */
+.md-typeset .dteg-finding__ref a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(255,255,255,.35);
+}
+.md-typeset .dteg-finding__ref a:hover { color: #fff; text-decoration-color: #fff; }
+.md-typeset .dteg-router__row a,
+.md-typeset .dteg-daycard__deeper a {
+  color: var(--md-primary-fg-color);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.md-typeset .dteg-router__row a:hover,
+.md-typeset .dteg-daycard__deeper a:hover { color: var(--md-accent-fg-color); }
+
 button:focus-visible,
 .dteg-card:focus-visible,
-.dteg-btn:focus-visible { outline: 3px solid var(--md-accent-fg-color); outline-offset: 2px; }
+.dteg-btn:focus-visible,
+[role="tabpanel"]:focus-visible { outline: 3px solid var(--md-accent-fg-color); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .dteg-checklist__bar span,
+  .dteg-card { transition: none; }
+}
 
 @media screen and (max-width: 76.1875em) {
   .dteg-findings, .dteg-sections { grid-template-columns: repeat(2, 1fr); }
