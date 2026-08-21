@@ -41,6 +41,13 @@
   function linkify(text) {
     var out = escapeHtml(text);
     out = out.replace(/\bSections?\s\d(\.\d+)?(,\s*\d(\.\d+)?)*/g, function (match) {
+      var nums = match.match(/\d(\.\d+)?/g) || [];
+      /* "Section 4" links as a whole phrase, so the target is not a lone digit.
+         "Sections 3.3, 5.5" keeps the shared prefix and links each number. */
+      if (nums.length === 1) {
+        var single = SECTION_URLS[nums[0].charAt(0)];
+        return single ? '<a href="' + single + '">' + match + "</a>" : match;
+      }
       return match.replace(/\d(\.\d+)?/g, function (num) {
         var url = SECTION_URLS[num.charAt(0)];
         return url ? '<a href="' + url + '">' + num + "</a>" : num;
